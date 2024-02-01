@@ -1,0 +1,9 @@
+[user]
+	name = I Am
+	email = iam@domain.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
