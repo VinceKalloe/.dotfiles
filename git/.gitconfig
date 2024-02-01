@@ -1,6 +1,6 @@
 [user]
 	name = I Am
-	email = iam@domain.com
+	email = user@domain.com
 [core]
 	editor = nvim
 [init]
