@@ -143,12 +143,12 @@ alias cpco="xclip -selection clipboard && xclip -o -selection clipboard"
 #set -o vi
 
 # NeoVIM multiply configs
-alias lvim-lazy="NVIM_APPNAME=nvim-LazyVim nvim"
-alias lvim-lazy="NVIM_APPNAME=nvim-NvChad nvim"
-alias lvim-lazy="NVIM_APPNAME=nvim-Kickstart nvim"
-alias lvim-lazy="NVIM_APPNAME=nvim-KickstartM nvim"
+alias lvim="NVIM_APPNAME=nvim-LazyVim nvim"
+alias cvim="NVIM_APPNAME=nvim-NvChad nvim"
+alias kvim="NVIM_APPNAME=nvim-Kickstart nvim"
+alias mvim="NVIM_APPNAME=nvim-KickstartM nvim"
 nvims() {
-  items=("default" "LazyVim" "NvChad" "Kickstart" "KickstartM")
+  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Kickstart" "nvim-KickstartM")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -164,3 +164,5 @@ bind -x '"\eq": nvims'
 export LF_COLORS=$(cat ~/.config/lf/colors)
 export LF_ICONS=$(cat ~/.config/lf/icons)
 
+# for go
+export PATH=$PATH:/usr/local/go/bin
