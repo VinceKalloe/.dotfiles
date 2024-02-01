@@ -165,4 +165,7 @@ export LF_COLORS=$(cat ~/.config/lf/colors)
 export LF_ICONS=$(cat ~/.config/lf/icons)
 
 # for go
-export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:/usr/local/go/bin
+
+# for rust
+#source ~/.cargo/env
