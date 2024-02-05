@@ -37,6 +37,6 @@ if [ -d "/usr/local/go/bin" ] ; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "~/go/bin" ] ; then
-    PATH="~/go/bin:$PATH"
+if [ -d "$HOME/go/bin" ] ; then
+    PATH="$HOME/go/bin:$PATH"
 fi
