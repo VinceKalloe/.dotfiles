@@ -144,11 +144,12 @@ alias cpco="xclip -selection clipboard && xclip -o -selection clipboard"
 
 # NeoVIM multiply configs
 alias lvim="NVIM_APPNAME=nvim-LazyVim nvim"
-alias cvim="NVIM_APPNAME=nvim-NvChad nvim"
+alias ncvim="NVIM_APPNAME=nvim-NvChad nvim"
+alias cvim="NVIM_APPNAME=nvim-Chad nvim"
 alias kvim="NVIM_APPNAME=nvim-Kickstart nvim"
 alias mvim="NVIM_APPNAME=nvim-KickstartM nvim"
 nvims() {
-  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Kickstart" "nvim-KickstartM")
+  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Chad" "nvim-Kickstart" "nvim-KickstartM")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
