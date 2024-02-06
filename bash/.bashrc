@@ -143,15 +143,25 @@ alias cpco="xclip -selection clipboard && xclip -o -selection clipboard"
 #set -o vi
 
 # NeoVIM multiply configs
-alias lvim="NVIM_APPNAME=nvim-LazyVim nvim"
-alias ncvim="NVIM_APPNAME=nvim-NvChad nvim"
-alias cvim="NVIM_APPNAME=nvim-Chad nvim"
-alias chad="NVIM_APPNAME=Chad nvim"
-alias kvim="NVIM_APPNAME=nvim-Kickstart nvim"
-alias mvim="NVIM_APPNAME=nvim-KickstartM nvim"
+# alias lvim="NVIM_APPNAME=nvim-LazyVim nvim"
+# alias ncvim="NVIM_APPNAME=nvim-NvChad nvim"
+# alias cvim="NVIM_APPNAME=nvim-Chad nvim"
+# alias chad="NVIM_APPNAME=Chad nvim"
+# alias kvim="NVIM_APPNAME=nvim-Kickstart nvim"
+# alias mvim="NVIM_APPNAME=nvim-KickstartM nvim"
+alias nvim_Chad="nvim-Chad" 
+alias nvim_Cpp="nvim-Cpp" 
+alias nvim_Go="nvim-Go" 
+alias nvim_LazyVim="nvim-LazyVim" 
+alias nvim_LunarVim="nvim-LunarVim" 
+alias nvim_LvimIde="nvim-LvimIde" 
+alias nvim_NvChad="nvim-NvChad" 
+alias nvim_Python="nvim-Python" 
+alias nvim_Rust="nvim-Rust"
 
 nvims() {
-  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Chad" "Chad" "nvim-Kickstart" "nvim-KickstartM")
+#  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Chad" "Chad" "nvim-Kickstart" "nvim-KickstartM")
+  items=("nvim" "nvim-Chad" "nvim-Cpp" "nvim-Go" "nvim-LazyVim" "nvim-LunarVim" "nvim-LvimIde" "nvim-NvChad" "nvim-Python" "nvim-Rust")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -172,3 +182,20 @@ export LF_ICONS=$(cat ~/.config/lf/icons)
 
 # for rust
 #source ~/.cargo/env
+# if command -v zoxide > /dev/null; then
+#   eval "$(zoxide init bash)"
+# fi
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# # Source the Lazyman shell initialization for aliases and nvims selector
+# # shellcheck source=.config/nvim-Lazyman/.lazymanrc
+# [ -f ~/.config/nvim-Lazyman/.lazymanrc ] && source ~/.config/nvim-Lazyman/.lazymanrc
+# # Source the Lazyman .nvimsbind for nvims key binding
+# # shellcheck source=.config/nvim-Lazyman/.nvimsbind
+# # [ -f ~/.config/nvim-Lazyman/.nvimsbind ] && source ~/.config/nvim-Lazyman/.nvimsbind
+# # Bob neovim version manager path
+# [ -d ${HOME}/.local/share/bob/nvim-bin ] && {
+#   export PATH="${HOME}/.local/share/bob/nvim-bin${PATH:+:${PATH}}"
+# }
