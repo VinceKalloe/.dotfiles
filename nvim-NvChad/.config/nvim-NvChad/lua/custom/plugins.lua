@@ -7,15 +7,6 @@ local plugins = {
 
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
@@ -46,38 +37,15 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
+
   {
-    'javiorfo/nvim-soil',
-    lazy = true,
-    ft = "plantuml",
+    "stevearc/conform.nvim",
+    --  for users those who want auto-save conform + lazyloading!
+    -- event = "BufWritePre"
     config = function()
-      require('soil').setup {
-        -- If you want to change default configurations
-        -- If you want to use Plant UML jar version instead of the install version
-        puml_jar = "/usr/share/plantum/plantuml.jar",
-
-        -- If you want to customize the image showed when running this plugin
-        image = {
-          bg = "transparent",
-          darkmode = true, -- Enable or disable darkmode 
-          format = "png", -- Choose between png or svg
-
-          -- This is a default implementation of using nsxiv to open the resultant image
-          -- Edit the string to use your preferred app to open the image
-          -- Some examples:
-          -- return "feh " .. img
-          -- return "xdg-open " .. img
-          execute_to_open = function(img)
-            return "nsxiv -b " .. img
-          end,
-        },
-      }
+      require "custom.configs.conform"
     end,
   },
-  -- Optional for puml syntax highlighting:
-  -- { 
-  --    'javiorfo/nvim-nyctophilia' 
-  -- }
 
   -- To make a plugin not be loaded
   -- {
