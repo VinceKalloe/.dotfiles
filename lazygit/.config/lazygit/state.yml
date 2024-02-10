@@ -1,0 +1,8 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/iam/.dotfiles
+startuppopupversion: 5
+customcommandshistory:
+- git branch
+hidecommandlog: false
+ignorewhitespaceindiffview: false
