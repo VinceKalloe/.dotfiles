@@ -21,6 +21,20 @@ M.treesitter = {
   },
 }
 
+M.mason_lspconfig = {
+  ensure_installed = {
+    "gopls",
+    "clangd",
+    "jdtls",
+    "lua_ls",
+    "clojure_lsp",
+    "pylsp",
+    "rust_analyzer",
+    "tsserver",
+    "bashls",
+  },
+}
+
 M.mason = {
   ensure_installed = {
     -- lua stuff
@@ -51,6 +65,11 @@ M.nvimtree = {
     icons = {
       show = {
         git = true,
+      },
+      glyphs = {
+        folder = {
+          default = "",
+        },
       },
     },
   },
