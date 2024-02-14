@@ -4,7 +4,6 @@ local M = {}
 local cwd = vim.fn.stdpath "config" .. "/"
 local config_dir = { cwd }
 
-
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },

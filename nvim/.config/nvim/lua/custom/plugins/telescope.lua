@@ -2,7 +2,7 @@
 return {
   "nvim-telescope/telescope.nvim",
   init = function()
-    require("core.utils").load_mappings "Telescope"
+    -- require("core.utils").load_mappings "Telescope"
   end,
   dependencies = {
     {
