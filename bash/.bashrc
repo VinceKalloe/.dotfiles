@@ -150,6 +150,7 @@ alias cpco="xclip -selection clipboard && xclip -o -selection clipboard"
 # alias kvim="NVIM_APPNAME=nvim-Kickstart nvim"
 # alias mvim="NVIM_APPNAME=nvim-KickstartM nvim"
 alias nvim_Mhirii="NVIM_APPNAME=nvim-Mhirii nvim"
+alias nvim_Alexis12119="NVIM_APPNAME=nvim-Alexis12119 nvim"
 alias nvim_knvim="NVIM_APPNAME=nvim-knvim nvim" 
 alias nvim_bnvim="NVIM_APPNAME=nvim-nvc-bruno nvim" 
 alias nvim_ownmade="NVIM_APPNAME=nvim-ownmade nvim" 
@@ -164,7 +165,7 @@ alias nvim_conf="NVIM_APPNAME=nvim-my-conform nvim"
 
 nvims() {
 #  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Chad" "Chad" "nvim-Kickstart" "nvim-KickstartM")
-  items=("nvim" "nvim-Mhirii " "nvim-knvim" "nvim-nvc-bruno" "nvim-ownmade" "nvim-Cpp" "nvim-Go" "nvim-LazyVim" "nvim-NvChad" "nvim-Python" "nvim-Rust" "nvim-my-nonls" "nvim-my-conform")
+  items=("nvim" "nvim-Mhirii" "nvim-Alexis12119" "nvim-knvim" "nvim-nvc-bruno" "nvim-ownmade" "nvim-Cpp" "nvim-Go" "nvim-LazyVim" "nvim-NvChad" "nvim-Python" "nvim-Rust" "nvim-my-nonls" "nvim-my-conform")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
