@@ -34,6 +34,19 @@ M.general = {
   },
 }
 
+M.Conform = {
+  plugin = true,
+  n = {
+    --  format with conform
+    ["<leader>fm"] = {
+      function()
+        require("conform").format()
+      end,
+      "formatting",
+    },
+  },
+}
+
 M.Harpoon = {
   plugin = true,
   n = {
