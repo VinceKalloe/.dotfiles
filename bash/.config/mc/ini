@@ -85,8 +85,6 @@ editor_stop_format_chars=-+*\\,.;:&>
 mcview_eof=
 skin=yadt256-defbg
 
-filepos_max_saved_entries=1024
-
 [Layout]
 output_lines=0
 left_panel_size=193
