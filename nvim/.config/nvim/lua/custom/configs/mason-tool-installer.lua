@@ -1,11 +1,6 @@
 local overrides = require("custom.configs.overrides")
 
 local formatters = overrides.conform.formatters_by_ft
-<<<<<<< HEAD
-table.insert(formatters, "prettier")
-=======
--- table.insert(formatters, "prettier")
->>>>>>> bc735ef (new)
 local linters = overrides.nvimlint.linters_by_ft
 
 local ensure_installed = {}

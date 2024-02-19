@@ -31,10 +31,6 @@ local overrides = require("custom.configs.overrides")
 local prettier_ft = overrides.conform.prettier_ft
 local formatters = overrides.conform.formatters_by_ft
 
-<<<<<<< HEAD
-for _, filetype in pairs(prettier_ft) do
-	formatters[filetype] = { "prettier" }
-=======
 -- print(vim.inspect(formatters))
 for _, filetype in pairs(prettier_ft) do
 	if filetype ~= nil then

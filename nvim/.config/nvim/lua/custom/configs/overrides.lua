@@ -57,12 +57,8 @@ M.conform = {
 		c = { "ast-grep" },
 		cpp = { "ast-grep" },
 		go = { "gofumpt" },
-<<<<<<< HEAD
-		yaml = { "yamlfmt" },
-=======
 		yaml = { "yamlfix" },
 		markdown = { "prettierd" },
->>>>>>> bc735ef (new)
 	},
 	prettier_ft = {
 		"css",
@@ -73,11 +69,7 @@ M.conform = {
 		"javascriptreact",
 		"javascript",
 		"less",
-<<<<<<< HEAD
 		"markdown",
-=======
-		-- "markdown",
->>>>>>> bc735ef (new)
 		"scss",
 		"typescript",
 		"typescriptreact",
