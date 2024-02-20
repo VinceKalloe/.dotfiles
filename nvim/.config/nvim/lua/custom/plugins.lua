@@ -4,6 +4,25 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
 	-- Override plugin definition options
+	{
+
+		"nvim-telescope/telescope.nvim",
+		dependencies = {
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+				enabled = function()
+					return vim.fn.executable("make") == 1
+				end,
+			},
+		},
+		-- init = function()
+		-- 	require("core.utils").load_mappings("Telescope")
+		-- end,
+		config = function()
+			require("custom.configs.telescope")
+		end,
+	},
 
 	-- Format
 	{
@@ -18,6 +37,9 @@ local plugins = {
 			"BufNewFile",
 			"BufWritePre",
 		},
+		init = function()
+			require("core.utils").load_mappings("Conform")
+		end,
 		config = function()
 			require("custom.configs.conform")
 		end,
@@ -95,6 +117,18 @@ local plugins = {
 		event = "InsertEnter",
 		config = function()
 			require("better_escape").setup()
+		end,
+	},
+
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		init = function()
+			require("core.utils").load_mappings("Harpoon")
+		end,
+		-- opts = {},
+		config = function()
+			require("custom.configs.harpoon")
 		end,
 	},
 

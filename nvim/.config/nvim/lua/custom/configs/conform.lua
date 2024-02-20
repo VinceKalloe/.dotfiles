@@ -36,7 +36,6 @@ for _, filetype in pairs(prettier_ft) do
 	if filetype ~= nil then
 		formatters[filetype] = { "prettier" }
 	end
->>>>>>> bc735ef (new)
 end
 
 require("mason-tool-installer").setup({

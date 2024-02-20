@@ -5,7 +5,7 @@ local linters = overrides.nvimlint.linters_by_ft
 
 local ensure_installed = {}
 
-for ft, fmt in pairs(formatters) do
+for _, fmt in pairs(formatters) do
 	if type(fmt) == "table" then
 		for _, v in pairs(fmt) do
 			table.insert(ensure_installed, v)
@@ -14,7 +14,7 @@ for ft, fmt in pairs(formatters) do
 		table.insert(ensure_installed, fmt)
 	end
 end
-for ft, lnt in pairs(linters) do
+for _, lnt in pairs(linters) do
 	if type(lnt) == "table" then
 		for _, v in pairs(lnt) do
 			table.insert(ensure_installed, v)
