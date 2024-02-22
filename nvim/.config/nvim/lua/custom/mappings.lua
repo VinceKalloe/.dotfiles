@@ -56,7 +56,7 @@ M.Conform = {
 M.Harpoon = {
 	plugin = true,
 	n = {
-		["<leader>oa"] = {
+		["<leader>ha"] = {
 			function()
 				require("harpoon"):list():append()
 				vim.notify("   Marked file", vim.log.levels.INFO, { title = "Harpoon" })
@@ -64,21 +64,21 @@ M.Harpoon = {
 			"Add Mark",
 			opts = { silent = true },
 		},
-		["<leader>oh"] = {
+		["<leader>hh"] = {
 			function()
 				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 			end,
 			"Harpoon Menu",
 			opts = { silent = true },
 		},
-		["<leader>on"] = {
+		["<leader>hn"] = {
 			function()
 				require("harpoon"):list():next()
 			end,
 			"Next",
 			opts = { silent = true },
 		},
-		["<leader>op"] = {
+		["<leader>hp"] = {
 			function()
 				require("harpoon"):list():prev()
 			end,

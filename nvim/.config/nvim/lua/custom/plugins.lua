@@ -44,6 +44,7 @@ local plugins = {
 			require("custom.configs.conform")
 		end,
 	},
+
 	-- Lint
 	{
 		"mfussenegger/nvim-lint",
@@ -58,7 +59,6 @@ local plugins = {
 			require("custom.configs.nvim-lint")
 		end,
 	},
-
 	{
 		"WhoIsSethDaniel/mason-tool-installer",
 		dependencies = {
@@ -120,6 +120,7 @@ local plugins = {
 		end,
 	},
 
+	-- Harpoon
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
