@@ -181,6 +181,7 @@ bind -x '"\eq": nvims'
 # for lf
 export LF_COLORS=$(cat ~/.config/lf/colors)
 export LF_ICONS=$(cat ~/.config/lf/icons)
+source ~/.config/lf/lf.bash
 
 # for go
 #export PATH=$PATH:/usr/local/go/bin

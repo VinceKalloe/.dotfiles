@@ -25,6 +25,14 @@ set drawbox true
 
 map . set hidden!
 
+# Use 'Q' to change dir in startig shel or 'q' to quit in start dir``
+cmd quit-and-cd &{{
+    pwd > $LF_CD_FILE
+    lf -remote "send $id quit"
+}}
+
+map Q quit-and-cd
+
 # Use the `dim` attribute instead of underline for the cursor in the preview pane
 # set cursorpreviewfmt "\033[7;2m"
 
