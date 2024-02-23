@@ -152,21 +152,15 @@ alias cpco="xclip -selection clipboard && xclip -o -selection clipboard"
 alias nvim_Normal="NVIM_APPNAME=nvim-Normal nvim"
 alias nvim_Mhirii="NVIM_APPNAME=nvim-Mhirii nvim"
 alias nvim_Alexis12119="NVIM_APPNAME=nvim-Alexis12119 nvim"
-alias nvim_knvim="NVIM_APPNAME=nvim-knvim nvim" 
-alias nvim_bnvim="NVIM_APPNAME=nvim-nvc-bruno nvim" 
-alias nvim_ownmade="NVIM_APPNAME=nvim-ownmade nvim" 
 alias nvim_Cpp="NVIM_APPNAME=nvim-Cpp nvim" 
 alias nvim_Go="NVIM_APPNAME=nvim-Go nvim" 
-alias nvim_LazyVim="NVIM_APPNAME=nvim-LazyVim nvim" 
 alias nvim_NvChad="NVIM_APPNAME=nvim-NvChad nvim" 
 alias nvim_Python="NVIM_APPNAME=nvim-Python nvim" 
-alias nvim_Rust="NVIM_APPNAME=nvim-Rust nvimt"
-alias nvim_none="NVIM_APPNAME=nvim-my-nonels nvim"
-alias nvim_conf="NVIM_APPNAME=nvim-my-conform nvim"
+alias nvim_Rust="NVIM_APPNAME=nvim-Rust nvim"
 
 nvims() {
-#  items=("default" "nvim-LazyVim" "nvim-NvChad" "nvim-Chad" "Chad" "nvim-Kickstart" "nvim-KickstartM")
-  items=("nvim" "nvim-Normal" "nvim-Mhirii" "nvim-Alexis12119" "nvim-knvim" "nvim-nvc-bruno" "nvim-ownmade" "nvim-Cpp" "nvim-Go" "nvim-LazyVim" "nvim-NvChad" "nvim-Python" "nvim-Rust" "nvim-my-nonls" "nvim-my-conform")
+#  items=("default" "nvim-NvChad" "nvim-Chad" "Chad" "nvim-Kickstart" "nvim-KickstartM")
+  items=("nvim" "nvim-Normal" "nvim-Mhirii" "nvim-Alexis12119" "nvim-Cpp" "nvim-Go" "nvim-LazyVim" "nvim-NvChad" "nvim-Python" "nvim-Rust")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
