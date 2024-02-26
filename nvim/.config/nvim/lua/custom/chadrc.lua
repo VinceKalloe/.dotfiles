@@ -4,7 +4,7 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require("custom.highlights")
 
-local headers = require("custom.configs.headers")
+local headers = require("custom.plugins.uix.settings.headers")
 local function get_header()
 	-- if vim.g.random_header then
 	if true then

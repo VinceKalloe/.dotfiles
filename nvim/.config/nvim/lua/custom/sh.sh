@@ -2,10 +2,10 @@
 echo "tru-la-la"
 for item in expression; do
 	command ...
-done
+ done
 
 name() {
-	command ...
+	         command ...
 }
 
 cat /dev/stdin <<<"hello world"
