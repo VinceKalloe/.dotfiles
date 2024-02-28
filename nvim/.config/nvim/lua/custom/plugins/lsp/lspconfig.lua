@@ -65,6 +65,16 @@ local plugins = {
 			local on_attach = require("plugins.configs.lspconfig").on_attach
 			local capabilities = require("plugins.configs.lspconfig").capabilities
 
+			-- local win = require("lspconfig.ui.windows")
+			-- local _default_opts = win.default_opts
+			-- win.default_opts = function(options)
+			-- 	local opts = _default_opts(options)
+			-- 	opts.border = "single"
+			-- 	return opts
+			-- end
+
+			require("lspconfig.ui.windows").default_options.border = "single"
+
 			local lspservers = require("custom.plugins.lsp.settings.lspservers")
 			-- print(vim.inspect("in LSP"))
 			for _, lsp in ipairs(lspservers) do
