@@ -62,37 +62,37 @@ opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
-local autocmd = vim.api.nvim_create_autocmd
-autocmd("BufEnter", {
-	desc = "Open mini.map and exclude some filtypes",
-	pattern = { "*" },
-	callback = function()
-		local exclude_ft = {
-			"",
-			"nofile",
-			"nowrite",
-			"quickfix",
-			"prompt",
-			"terminal",
-			"toggleterm",
-			"startify",
-			"dashboard",
-			"alpha",
-			"netrw",
-			"NvimTree",
-			"packer",
-			"telescope",
-			"lazygit",
-			"bufferline",
-		}
-		local map = require("mini.map")
-		if vim.o.buftype == "" and not vim.tbl_contains(exclude_ft, vim.o.filetype) then
-			map.open()
-		elseif vim.o.buftype == "nofile" and vim.o.filetype == "minimap" then
-			return
-		else
-			vim.b.minimap_disable = true
-			map.close()
-		end
-	end,
-})
+-- local autocmd = vim.api.nvim_create_autocmd
+-- autocmd("BufEnter", {
+-- 	desc = "Open mini.map and exclude some filtypes",
+-- 	pattern = { "*" },
+-- 	callback = function()
+-- 		local exclude_ft = {
+-- 			"",
+-- 			"nofile",
+-- 			"nowrite",
+-- 			"quickfix",
+-- 			"prompt",
+-- 			"terminal",
+-- 			"toggleterm",
+-- 			"startify",
+-- 			"dashboard",
+-- 			"alpha",
+-- 			"netrw",
+-- 			"NvimTree",
+-- 			"packer",
+-- 			"telescope",
+-- 			"lazygit",
+-- 			"bufferline",
+-- 		}
+-- 		local map = require("mini.map")
+-- 		if vim.o.buftype == "" and not vim.tbl_contains(exclude_ft, vim.o.filetype) then
+-- 			map.open()
+-- 		elseif vim.o.buftype == "nofile" and vim.o.filetype == "minimap" then
+-- 			return
+-- 		else
+-- 			vim.b.minimap_disable = true
+-- 			map.close()
+-- 		end
+-- 	end,
+-- })

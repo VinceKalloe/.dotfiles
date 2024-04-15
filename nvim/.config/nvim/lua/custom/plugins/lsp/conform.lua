@@ -75,7 +75,7 @@ local plugins = {
 		event = {
 			"BufReadPre",
 			"BufNewFile",
-			"BufWritePre",
+			-- "BufWritePre",
 		},
 		init = function()
 			require("core.utils").load_mappings("conform")
@@ -85,12 +85,12 @@ local plugins = {
 		-- end,
 		opts = {
 			lsp_fallback = true,
-			format_on_save = {
-				-- These options will be passed to conform.format()
-				timeout_ms = 1000,
-				async = false,
-				lsp_fallback = true,
-			},
+			-- format_on_save = {
+			-- 	-- These options will be passed to conform.format()
+			-- 	timeout_ms = 1000,
+			-- 	async = false,
+			-- 	lsp_fallback = true,
+			-- },
 			formatters_by_ft = require("custom.plugins.lsp.settings.formatters"),
 		},
 		config = function(_, opts)
