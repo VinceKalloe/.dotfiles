@@ -1,2 +1,2 @@
 # dotfiles
-dotfiles for use with stow
+dotfiles for using with stow
